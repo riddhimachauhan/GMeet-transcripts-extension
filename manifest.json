@@ -1,0 +1,19 @@
+
+{
+  "manifest_version": 3,
+  "name": "Meet Transcript Summarizer",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://meet.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
